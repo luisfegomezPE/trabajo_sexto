@@ -31,8 +31,15 @@ var map = new ol.Map({
     })
 });
 
+var layerSwitcher = new ol.control.LayerSwitcher({ 
+  tipLabel: 'Leyenda' 
+});
 
-map.getView().fit([-8583583.239426, -1355076.379982, -8562003.245181, -1337413.250392], map.getSize());
+ 	
+map.addControl(layerSwitcher);
+
+
+map.getView().fit([-8582829.788356, -1357780.714988, -8562518.125565, -1337737.968085], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -50,6 +57,13 @@ function getPopupFields(layerList, layer) {
     var idx = layersList.indexOf(layer) - (layersList.length - popupLayers.length);
     return popupLayers[idx];
 }
+
+1
+2
+3
+	
+
+
 
 
 var collection = new ol.Collection();
